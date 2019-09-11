@@ -6,14 +6,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v1
-    - name: configure
-     - run: ./configure
-    - name: make
-    -  run: make
-    - name: make check
-    -  run: make check
-    - name: make distcheck
-    -  run: make distcheck
+
+steps:
+  - name: Hello world
+    run: echo Hello world ${FIRST_NAME} ${MIDDLE_NAME} ${LAST_NAME}!
+    env:
+      first_name: Chen
+      middle_name: Guang
+      last_name: Jing
